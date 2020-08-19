@@ -46,10 +46,13 @@ STEP 6:
   This click handler needs to use 'setCount' to set the 'count' to be zero again.
 */
 
-import React from 'react'; /* STEP 0 */
+
+//i imported the state hook
+import React, { useState } from 'react'; /* STEP 0 */
 
 export default function Counter() {
   /* STEP 1 */
+  let [count, setCount] = useState(0);
 
   const increment = () => {
     /* STEP 4 */
@@ -65,7 +68,12 @@ export default function Counter() {
     fontSize: '1.5em',
     marginBottom: '0.3em',
     color: 'royalblue', /* STEP 2 */
-  };
+  //   if(count % 2 === 0){
+  //     color: royalblue
+  //   }
+  //   else{color: crimson}
+
+   };
 
   return (
     <div className='widget-counter container'>
