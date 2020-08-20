@@ -63,26 +63,27 @@ export default function Counter() {
   const reset = () => {
     /* STEP 6 */
   };
-
+//made a color variable
+  let odOrEven = 'royalblue';
   const style = {
     fontSize: '1.5em',
     marginBottom: '0.3em',
-    color: 'royalblue', /* STEP 2 */
-  //   if(count % 2 === 0){
-  //     color: royalblue
-  //   }
-  //   else{color: crimson}
+    color: count % 2 ===0 ? 'royalblue' : 'crimson'
+        
+    
 
-   };
+
+}
 
   return (
     <div className='widget-counter container'>
       <h2>Counter</h2>
-      <div style={style}>Number 0 is even</div> {/* STEP 3 */}
+      <div style={style}>Number {count} is {count % 2 ===0 ? "even" : "odd"}</div> {/* STEP 3 */}
+      
       <div>
-        <button onClick={increment}>Increment</button>
-        <button onClick={decrement}>Decrement</button>
-        <button onClick={reset}>Reset</button>
+        <button onClick={() => setCount(count +1)}>Increment</button>
+        <button onClick={() => setCount(count -1)}>Decrement</button>
+        <button onClick={() => setCount(0)}>Reset</button>
       </div>
     </div>
   );
