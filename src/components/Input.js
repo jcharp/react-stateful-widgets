@@ -62,9 +62,9 @@ export default function Input() {
   return (
     <div className='widget-input container'>
       <h2>Input</h2>
-      <div style={style}>{inputValue.toUpperCase} {setInputValue} </div> {/* STEP 3 */}
+      <div style={style}> </div> {/* STEP 3 */}
       <div>
-        <input type='text' onChange={changeInput} value={inputValue}/> {/* STEP 6 */}
+        <input type='text' onChange={changeInput}/> {/* STEP 6 */}
         <button onClick={reset}>Reset</button>
       </div>
     </div>
